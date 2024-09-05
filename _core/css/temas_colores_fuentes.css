@@ -1,0 +1,28 @@
+﻿/* URL Paleta de colores LIGHT: https://www.coloreasily.com/?colors=122120-ffffff-6baeaa-f2f8f7-4c8a87 */
+/* URL Paleta de colores DARK: https://www.coloreasily.com/?colors=dbf3f5-11383b-c4eedc-162d4b-fbfefd */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani');
+
+:root {
+   --light-color-texto: #122120;
+   --light-color-fondo: #ffffff;
+   --light-color-acento-1: #6baeaa;
+   --light-color-acento-2: #f2f8f7;
+   --light-color-acento-3: #4c8a87;
+   --dark-color-texto: #dbf3f5;
+   --dark-color-fondo: #11383b;
+   --dark-color-acento-1: #c4eedc;
+   --dark-color-acento-2: #162d4b;
+   --dark-color-acento-3: #fbfefd;
+}
+
+ .light-theme {
+   color: #122120;
+   background-color: #ffffff;
+}
+
+.dark-theme {
+   color: #dbf3f5;
+   background-color: #11383b;
+}
