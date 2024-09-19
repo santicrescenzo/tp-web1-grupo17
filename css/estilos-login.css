@@ -1,0 +1,77 @@
+﻿
+body{
+
+   margin: 0;
+   color: var(--light-color-texto);
+   font-family: "Titillium Web",sans-serif;
+}
+
+.contenedor_general{
+
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--light-color-fondo);
+   
+
+}
+
+.card{
+
+   width: 20rem;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   background-color: var(--light-color-acento-1);
+   padding: 1em;
+   border-radius: 10%;
+
+}
+
+.card h1{
+
+   text-align: center;
+   color: var(--light-color-acento-2);
+   font-family: "Nunito Sans",sans-serif;
+}
+
+.card a{
+
+   text-decoration: none;
+   color: var(--light-color-texto);
+
+}
+
+.card a:hover{
+
+   color: var(--light-color-acento-2);
+
+}
+
+.card input{
+
+   display: flex;
+   margin-bottom: 7px;
+   width: 90%;
+}
+
+#btn_iniciar_sesion{
+
+   background-color: var(--light-color-acento-3);
+   padding: 5px;
+   border-radius: 1em;
+   color: var(--light-color-texto);
+   font-family: "Mukta Vaani",sans-serif;
+
+}
+
+#btn_iniciar_sesion:hover{
+
+   background-color: var(--light-color-acento-2);
+   cursor: pointer;
+
+}
+
+
