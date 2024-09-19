@@ -40,13 +40,9 @@ body{
 }
 
 #titulogo {
-   display: inline;
+   display: flex;
 }
 
-#logo-contenedor {
-   display: flex;
-   align-items: center;
-}
 
 #buscador-contenedor {
    align-items: center;
@@ -67,7 +63,7 @@ body{
 #buscador{
    border: none;
    outline: none;
-   width: 400px;
+   width: 70%;
    height: 35px;
    background: transparent;
    margin-left: 10px;
