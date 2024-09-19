@@ -1,75 +1,135 @@
 ﻿@import url("_core/css/temas_colores_fuentes.css");
 
-*{
-   margin: 0;
-   box-sizing: border-box;
-   padding: 0px;
-}
-
 body{
 
    color: var(--light-color-texto);
    background-color: var(--light-color-fondo);
-
-}
-
-a{
-   text-decoration: none;
+   margin: auto;
 }
 
 
 #encabezado-principal {
-   background-color: var(--light-color-acento-1);
+   background-color: var(--light-color-acento-3);
    color: var(--light-color-texto);
    font-family: 'Titillium Web',sans-serif;
    display: flex;
-   padding: 7px;
-   
+   flex-direction: column;
 }
 
-
-.logo-img{
-   height: 40px;
-   width: 40px;
-}
-
-.titulogo{
-   display: inline;
-}
-
-.a-header{
-   color: var(--light-color-texto);
-}
-
-#navegacion-categoria{
-   background-color: var(--light-color-acento-3);
-   font-family: 'Nunito Sans',sans-serif;
-   align-items: center;
+#encabezado-primera-linea {
    display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin: 5px 10px 5px 10px;
+   height: 100px;
+}
+
+#encabezado-segunda-linea {
+   border-top: 3px solid;
+   border-top-color: var(--light-color-acento-1);
+   height: 100px;
+   display: flex;
+   align-items: center;
    justify-content: center;
 }
 
+#logo {
+   width: 40px;
+   height: 40px;
+}
 
-.tab-categoria{
+#titulogo {
+   display: inline;
+}
+
+#logo-contenedor {
+   display: flex;
+   align-items: center;
+}
+
+#buscador-contenedor {
+   align-items: center;
+   display: flex;
+   flex-direction: row;
+   width: 500px;
+   height: 50px;
+   background-color: var(--light-color-acento-1);
+   border-radius: 28px;
+   margin-left: 10px;
+}
+
+#buscador-logo{
+   font-size: 30px !important;
+   margin-left: 10px;
+}
+
+#buscador{
+   border: none;
+   outline: none;
+   width: 400px;
+   height: 35px;
+   background: transparent;
+   margin-left: 10px;
+}
+
+#iconos-contenedor {
+   width: 250px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+#iconos-contenedor .material-symbols-outlined:hover {
    color: var(--light-color-acento-2);
-   font-weight: 500; 
-   margin: auto;
+   cursor: pointer;
 }
 
-.tab-categoria:hover{
-color: var(--dark-color-acento-2);
+.material-symbols-outlined {
+   font-size: 30px !important;
 }
 
+#navegacion-categoria {
+   background-color: var(--light-color-acento-1);
+   font-family: 'Nunito Sans',sans-serif;
+   display: flex;
+   justify-content: space-around;
+}
 
-#seccion-categoria {
+#navegacion-categoria ul {
+   text-decoration: none;
+   list-style-type: none;
+   display: flex;
+}
+
+#navegacion-categoria ul a {
+   text-decoration: none;
+   color: var(--light-color-texto);
+   padding: 30px;
+}
+
+#navegacion-categoria ul a:hover {
+   color: var(--light-color-acento-2);
+}
+
+#seccion-categoria{
+   display: flex;
+   flex-direction: column;
    min-height: 720px;
    background-color: var(--light-color-acento-2);
    font-family: 'Mukta Vaani',sans-serif;
-   
+   justify-content: center;
+   align-items: center;
 }
 
 .articulo-categoria {
-   border: solid 3px var(--light-color-acento-1);
+   margin-left: 10px;
+   border: 3px solid var(--light-color-acento-1);
+   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   width: 800px;
+   margin-top: 10px;
+   padding: 10px;
 }
 
 .item-valor-portada{
@@ -81,6 +141,11 @@ color: var(--dark-color-acento-2);
    background-color: var(--light-color-acento-3);
    color: var(--light-color-texto);
    font-family: 'Titillium Web',sans-serif;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10px;
 }
 
 #qr-code {

@@ -8,23 +8,57 @@
 
    <link rel="stylesheet" href="css/estilo-principal.css">
    <link rel="stylesheet" href="_core/css/temas_colores_fuentes.css">
-   <link rel="icon" href="assets/img/cocinero.ico">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
    <header id="encabezado-principal">
-      <a href="#" class="a-header">
-         <h2 class="titulogo">Sabores <img src="assets/img/cocinero.png" alt="logoDeRecetas" class="logo-img"> Unicos</h2>
-      </a>
+      <div id="encabezado-primera-linea">
+         <div id="logo-contenedor">
+            <h2 class="titulogo">Sabores<img alt="logoDeRecetas" id="logo" src="assets/img/cocinero.png">Únicos</h2>
+         </div>
+
+         <div id="buscador-contenedor">
+            
+            <span class="material-symbols-outlined" id="buscador-logo">
+               search
+            </span>
+
+            <form action="#" method="get">
+               <input type="text" id="buscador" name="buscador" placeholder="Buscar">
+            </form>
+
+         </div>
+
+         <div id="iconos-contenedor">
+            <span class="material-symbols-outlined">
+               person
+            </span>
+
+            <span class="material-symbols-outlined">
+               logout
+            </span>
+
+            <span class="material-symbols-outlined">
+               toggle_off
+            </span>
+         </div>
+      </div>
+      <div id="encabezado-segunda-linea">ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</div>
    </header>
 
    <main>
       <nav id="navegacion-categoria">
-         <a href="#" id="tab-categoria-1" class="tab-categoria">Carnes</a>
-         <a href="#" id="tab-categoria-2" class="tab-categoria">Ensaladas, Sopas y Cremas</a>
-         <a href="#" id="tab-categoria-3" class="tab-categoria">Pastas</a>
-         <a href="#" id="tab-categoria-4" class="tab-categoria">Pescados y Mariscos</a>
-         <a href="#" id="tab-categoria-5" class="tab-categoria">Postres</a>
+         <ul>
+            <li><a href="#" id="tab-categoria-1" class="tab-categoria">Carnes</a></li>
+            <li><a href="#" id="tab-categoria-2" class="tab-categoria">Ensaladas, Sopas y Cremas</a></li>
+            <li><a href="#" id="tab-categoria-3" class="tab-categoria">Pastas</a></li>
+            <li><a href="#" id="tab-categoria-4" class="tab-categoria">Pescados y Mariscos</a></li>
+            <li><a href="#" id="tab-categoria-5" class="tab-categoria">Postres</a></li>
+         </ul>
       </nav>
 
       <section id="seccion-filtros">
@@ -256,9 +290,19 @@
    </main>
 
    <footer id="footer-principal">
-      <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
-      <div id="footer-principal-centro"><img id="qr-code" src="assets/img/qr.png" /></div>
-      <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</section>
+
+      <div id="footer-principal-izquierda">
+         FOOTER PRINCIPAL (IZQUIERDA)
+      </div>
+      
+      <div id="footer-principal-centro">
+         <img id="qr-code" src="assets/img/qr.png" />
+      </div>
+      
+      <div id="footer-principal-derecha">
+         FOOTER PRINCIPAL (DERECHA)
+      </section>
+
    </footer>
 
    <!-- NO MODIFICAR: realiza la carga de datos -->
