@@ -3,9 +3,63 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <title>Mis Datos</title>
+   <link rel="stylesheet" href="../_core/css/temas_colores_fuentes.css">
+   <link rel="stylesheet" href="../css/estilos-datos-personales.css">
 </head>
 <body>
-   
+
+   <section class="usuario">
+      <h1>Mi Usuario</h1>
+
+      <form action="#">
+
+         <label for="email">E-mail</label>
+         <input type="email" name="email" id="email">
+
+         <button class="guardar">Guardar Cambios</button>
+         <br>
+         <label for="contrasenia">Contraseña</label>
+         <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
+
+         <button id="btn_cambiar">Cambiar</button>
+
+
+
+      </form>
+
+   </section>
+
+   <br>
+
+   <section class="datos_personales">
+
+      <h1>Datos Personales</h1>
+
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" required> 
+
+      <label for="apellido">Apellido</label>
+      <input type="text" name="apellido" id="apellido" required>
+
+      <label for="tipo">Tipo</label>
+      <input type="text" name="tipo" id="tipo" required>
+
+      <label for="nro_doc">Numero de documento</label>
+      <input type="number" name="nro_doc" id="nro_doc" required>
+
+      <label for="fecha_de_nacimiento">Fecha de Nacimiento</label>
+      <input type="date" name="fecha_de_nacimiento" id="fecha_de_nacimiento" required>
+
+      <label for="nro_celular">Telefono Celular</label>
+      <input type="number" name="nro_celular" id="nro_celular" required>
+
+      <label for="email_secundario">E-mail Secundario</label>
+      <input type="email" name="email-secundario" id="email_secundario" required>
+
+      <button class="guardar">Guardar Cambios</button>
+   </section>
+
+
 </body>
 </html>
