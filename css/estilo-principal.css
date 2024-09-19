@@ -1,5 +1,11 @@
 ﻿@import url("_core/css/temas_colores_fuentes.css");
 
+*{
+   margin: 0;
+   box-sizing: border-box;
+   padding: 0px;
+}
+
 body{
 
    color: var(--light-color-texto);
@@ -7,22 +13,59 @@ body{
 
 }
 
+a{
+   text-decoration: none;
+}
+
 
 #encabezado-principal {
-   background-color: var(--light-color-acento-3);
+   background-color: var(--light-color-acento-1);
    color: var(--light-color-texto);
    font-family: 'Titillium Web',sans-serif;
+   display: flex;
+   padding: 7px;
+   
 }
 
-#navegacion-categoria {
-   background-color: var(--light-color-acento-1);
-   font-family: 'Nunito Sans',sans-serif;
+
+.logo-img{
+   height: 40px;
+   width: 40px;
 }
+
+.titulogo{
+   display: inline;
+}
+
+.a-header{
+   color: var(--light-color-texto);
+}
+
+#navegacion-categoria{
+   background-color: var(--light-color-acento-3);
+   font-family: 'Nunito Sans',sans-serif;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+
+
+.tab-categoria{
+   color: var(--light-color-acento-2);
+   font-weight: 500; 
+   margin: auto;
+}
+
+.tab-categoria:hover{
+color: var(--dark-color-acento-2);
+}
+
 
 #seccion-categoria {
    min-height: 720px;
    background-color: var(--light-color-acento-2);
    font-family: 'Mukta Vaani',sans-serif;
+   
 }
 
 .articulo-categoria {
