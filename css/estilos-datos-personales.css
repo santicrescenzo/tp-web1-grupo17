@@ -2,6 +2,7 @@
 body{
 
    font-family: "Titillium Web",sans-serif;
+   color: var(--light-color-texto);
    background-color: var(--light-color-fondo);
    display: flex;
    flex-direction: column;
@@ -9,62 +10,108 @@ body{
    align-items: center;
 }
 
-.usuario{
-
-   /*background-color: var(--light-color-acento-1);*/
-   display: flex;
-   flex-direction: column;
-   padding: 1em;
-   
+#usuario {
+   height: 300px;
 }
 
-button{
+#datos-personales {
+   height: 620px;
+}
 
+input {
+   height: 22px;
+   outline: none;
+   margin-bottom: 10px;
+   border: 1px solid rgb(189, 188, 188);
+   padding-left: 8px;
+   border-radius: 3px;
+   width: 90%;
+}
+
+input:focus {
+   border: 1px solid var(--light-color-acento-1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+#tipo {
+   margin-bottom: 10px;
+   outline: none;
+}
+
+#tipo:focus {
+   border: 1px solid var(--light-color-acento-1);
+}
+
+#contrasenia {
+   width: 70%;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.guardar {
    background-color: var(--light-color-acento-3);
    color: var(--light-color-acento-2);
    border-radius: 1em;
+   cursor: pointer;
+   margin-top: 1em;
+   width: 10em;
+   font-family: "Titillium Web",sans-serif;
+   height: 30px;
+   font-size: 14px;
+   border: none;
+}
+
+.guardar:hover {
+   background-color: var(--light-color-acento-1);
+}
+
+#btn_cambiar {
+   background-color: var(--light-color-acento-3);
+   color: var(--light-color-acento-2);
+   border-radius: 1em;
+   border: none;
+   cursor: pointer;
+   width: 100px;
+   height: 30px;
+   font-size: 14px;
+   font-family: "Titillium Web",sans-serif;
+}
+
+#btn_cambiar:hover{
+
+   background-color: var(--light-color-acento-1);
+
+}
+
+form {
    
-}
-
-button:hover{
-
-   background-color: var(--light-color-acento-2);
-   color: var(--light-color-texto);
-
-}
-
-.datos_personales{
-
- /*  background-color: var(--light-color-acento-1);*/
-   padding: 1em;
    display: flex;
    flex-direction: column;
    gap: 5px;
    flex-wrap: wrap;
 }
 
-.guardar{
-
-  margin-top: 1em;
-   justify-content: left;
-   display: flex;
-   width: 10em;
-   font-family: "Mukta Vaani",sans-serif;
-}
-
 h1{
-
    font-family: "Nunito Sans",sans-serif;
-
 }
 
 section{
-
-   border-radius: 2em;
+   padding: 1em;
+   border-radius: 1em;
    border: solid 3px var(--light-color-acento-3);
    margin: 1em;
-   width: 80%;
-   box-shadow: 0px 0px 30px var(--light-color-acento-3);
- 
-
+   width: 65%;
 }
+
+#contenedor-password {
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+}
+
+
+
