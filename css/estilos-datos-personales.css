@@ -12,10 +12,12 @@ body{
 
 #usuario {
    height: 300px;
+   background-color: var(--light-color-acento-2);
 }
 
 #datos-personales {
    height: 620px;
+   background-color: var(--light-color-acento-2);
 }
 
 input {
