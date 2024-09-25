@@ -89,6 +89,7 @@ body{
 
 .material-symbols-outlined {
    font-size: 30px !important;
+   color: var(--light-color-texto);
 }
 
 #navegacion-categoria {
