@@ -18,7 +18,7 @@ form {
    border: solid var(--light-color-acento-3);
    border-radius: 20px;
    width: 400px;
-   height:420px;
+   height:70%;
 }
 
 input {
@@ -102,4 +102,21 @@ span:hover {
    cursor: pointer;
 }
 
+.msjMail{
 
+   align-items: center;
+   justify-content: center;
+   display: none;
+   font-size: 90%;
+
+}
+
+.msjContraseña{
+
+   display: none;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   font-size: 90%;
+
+}
