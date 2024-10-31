@@ -18,7 +18,7 @@ form {
    border: solid var(--light-color-acento-3);
    border-radius: 20px;
    width: 400px;
-   height:400px;
+   height:70%;
 }
 
 input {
@@ -104,4 +104,20 @@ a {
 span:hover {
    color: var(--light-color-acento-1) !important;
    cursor: pointer;
+}
+
+#msjMail{
+
+   display: none;
+   color: red;
+   font-size: 90%;
+
+}
+
+#msjContraseña{
+
+   display: none;
+   color: red;
+   font-size: 90%;
+
 }
