@@ -12,7 +12,7 @@ linksCategorias.forEach(function(linkCategoria) {
       Object.entries(recetas).forEach((entry) => {
       const [key, value] = entry;
 
-      if (linkCategoria.innerText === value.Categoria)
+      if (linkCategoria.innerText === value.Categoria || linkCategoria.innerText === value.Icono)
       {
          document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-nombre").innerText = value["Nombre"];
          document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-autor").innerText = value["Autor"];
@@ -24,24 +24,24 @@ linksCategorias.forEach(function(linkCategoria) {
          for (const property in value) {
             switch(property.split(".")[0]) {
                case "personalizado_1":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_1").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_1").innerText = value[property];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > h4.item-campo-personalizado_1").innerText = property.split(".")[1];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > p.item-valor-personalizado_1").innerText = value[property];
                   break;
                case "personalizado_2":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_2").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_2").innerText = value[property];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > h4.item-campo-personalizado_2").innerText = property.split(".")[1];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > p.item-valor-personalizado_2").innerText = value[property];
                   break;
                case "personalizado_3":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_3").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_3").innerText = value[property];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > h4.item-campo-personalizado_3").innerText = property.split(".")[1];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > p.item-valor-personalizado_3").innerText = value[property];
                   break;
                case "personalizado_4":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_4").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_4").innerText = value[property];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > h4.item-campo-personalizado_4").innerText = property.split(".")[1];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > p.item-valor-personalizado_4").innerText = value[property];
                   break;
                case "personalizado_5":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_5").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_5").innerText = value[property];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > h4.item-campo-personalizado_5").innerText = property.split(".")[1];
+                  document.querySelector("article." + value["Id"].split("-")[1] + " div.detalle-articulo > p.item-valor-personalizado_5").innerText = value[property];
                   break;
             }
          };
