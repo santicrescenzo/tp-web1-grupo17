@@ -143,7 +143,23 @@ body{
    display: flex;
    flex-direction: column;
    box-sizing: border-box;
+   transition: all 0.3 ease;
 }
+
+
+.articulo-categoria.hover-effect {
+   background-color: #d5d5d5; 
+   transform: scale(1.050);     
+}
+
+
+.articulo-categoria.click-effect {
+   background-color: #648587; 
+   
+       
+}
+
+
 
 .item-valor-portada{
    width: 90%;
