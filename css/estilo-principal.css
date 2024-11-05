@@ -180,7 +180,15 @@ body{
        
 }
 
-
+.star-rating {
+   font-size: 24px;
+}
+.star {
+   color: gray;
+}
+.star.checked {
+   color: gold;
+}
 
 .item-valor-portada{
    width: 90%;
