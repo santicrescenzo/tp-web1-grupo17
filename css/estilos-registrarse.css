@@ -92,6 +92,12 @@ a {
    cursor: pointer;
 }
 
+#boton-enviar:disabled {
+   background-color: lightgrey;
+   color: var(--light-color-texto);
+   cursor: not-allowed;
+}
+
 #contenedor-terminos {
    margin: -10px 5px 5px 5px;
    padding: 5px;
@@ -108,8 +114,9 @@ span:hover {
 
 #msjMail{
 
+   align-items: center;
+   justify-content: center;
    display: none;
-   color: red;
    font-size: 90%;
 
 }
@@ -117,7 +124,9 @@ span:hover {
 #msjContraseña{
 
    display: none;
-   color: red;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
    font-size: 90%;
 
 }

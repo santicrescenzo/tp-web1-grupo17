@@ -9,20 +9,20 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-   <form id="formulario" action="#" method="post">
+   <form id="formulario" action="#" method="post" novalidate>
       <h1>Registrarse</h1>
-      <input type="email" id="correo" name="correo" placeholder="Email*" required>
+      <input type="email" id="correo" name="correo" placeholder="Email*">
       <p id="msjMail"></p>
 
       <div id="contenedor-password">
-         <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña*" required>
+         <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña*">
          <span class="material-symbols-outlined">
             visibility
          </span>
       </div>
       <p id="msjContraseña"></p>
       
-      <input id="boton-enviar" type="submit" value="Registrate">
+      <input id="boton-enviar" type="submit" value="Registrate" disabled>
       <p> ¿Ya tenés una cuenta? <a href="../html/login.html"> Iniciar sesión </a> </p>
       <div id="contenedor-terminos">
          <p id="terminos-condiciones"> Al continuar, confirmo que he leído y aceptado los <span style="color: var(--light-color-acento-3);">Términos y Condiciones</span> y las <span style="color: var(--light-color-acento-3);">Politicas de privacidad</span> de Sabores Únicos</span> </p>

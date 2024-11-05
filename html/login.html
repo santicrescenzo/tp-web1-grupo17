@@ -9,13 +9,13 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-   <form id="formulario" action="#" method="post">
+   <form id="formulario" action="#" method="post" novalidate> <!--Se agrega novalidate para validarlo con js -->
       <h1>Iniciar sesión</h1>
-      <input type="email" id="correo" name="correo" placeholder="Email*" required>
+      <input type="email" id="correo" name="correo" placeholder="Email*"> <!-- required -->
       <p class="msjMail"></p>
 
       <div id="contenedor-password">
-         <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña*" required>
+         <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña*"> <!-- required -->
          <span class="material-symbols-outlined">
             visibility
          </span>
@@ -23,7 +23,7 @@
       <p class="msjContraseña"></p>
       
       <a id="recuperar-contraseña" href="../html/recuperar-password.html">¿Olvidaste tu contraseña?</a>
-      <input id="boton-enviar" type="submit" value="Iniciar sesión">
+      <input id="boton-enviar" type="submit" value="Iniciar sesión" disabled>
       <p> ¿No tenés cuenta? <a href="../html/registrarse.html"> Registrate </a> </p>
       <div id="contenedor-terminos">
          <p id="terminos-condiciones"> Al continuar, confirmo que he leído y aceptado los <span style="color: var(--light-color-acento-3);">Términos y Condiciones</span> y las <span style="color: var(--light-color-acento-3);">Politicas de privacidad</span> de Sabores Únicos</span> </p>

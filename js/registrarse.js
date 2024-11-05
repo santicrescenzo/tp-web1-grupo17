@@ -14,42 +14,72 @@ function validarPassword(password){
     
 }
 
+const correo = document.getElementById("correo");
+const contrasenia = document.getElementById("contraseña");
+
+function habilitacionBoton() {
+
+    // Verifica si ambos campos tienen algún valor
+    const emailCompletado = correo.value.trim() !== "";
+    const contraseniaCompletada = contrasenia.value.trim() !== "";
+
+    // Habilita el botón solo si ambos campos están llenos
+    document.getElementById("boton-enviar").disabled = !(emailCompletado && contraseniaCompletada);
+}
+
+// Agrega el evento 'input' a ambos campos para monitorear los cambios
+correo.addEventListener("input", habilitacionBoton);
+contrasenia.addEventListener("input", habilitacionBoton);
+
+
+
 document.getElementById("formulario").addEventListener("submit", function (event){
 
     event.preventDefault();
 
     const EMAIL_INPUT=document.getElementById("correo");
-    const msjMail=document.getElementById("msjMail");
+    let msjMail=document.getElementById("msjMail");
 
     if(validarMail(EMAIL_INPUT.value)){
 
-        msjMail.style.display="none"
-        msjMail.textContent="";
-        EMAIL_INPUT.style.borderColor="grey";
+        msjMail.style.display="flex";
+        msjMail.style.color="green";
+        msjMail.textContent="Correo válido";
+        EMAIL_INPUT.style.borderColor="green";
     }else{
 
-        EMAIL_INPUT.style.borderColor="red"
-        msjMail.textContent="Correo invalido";
-        msjMail.style.display="flex"
+        EMAIL_INPUT.style.borderColor="red";
+        msjMail.textContent="Correo inválido";
+        msjMail.style.display="flex";
+        msjMail.style.color="red";
+        EMAIL_INPUT.value="";
+        habilitacionBoton();
     }
 
-    EMAIL_INPUT.value="";
 
     const CONTRASEÑA=document.getElementById("contraseña")
     const msjContraseña=document.getElementById("msjContraseña");
 
     if(validarPassword(CONTRASEÑA.value)){
 
-        msjContraseña.textContent="";
-        msjContraseña.style.display="none"
+        msjContraseña.style.display="flex"
+        msjContraseña.textContent="Contraseña valida";
+        msjContraseña.style.color="green"
+        document.getElementById("contenedor-password").style.borderColor="green"
 
     }else{
 
-        msjContraseña.textContent="Contraseña invalida";
         msjContraseña.style.display="flex"
+        msjContraseña.textContent="Ingrese una contraseña con una longitud de 8 a 12 caracteres y que contenga al menos una mayuscula, una minuscula, un numero y un caracter especial";
+        msjContraseña.style.color="red"
+        document.getElementById("contenedor-password").style.borderColor="red"
+        CONTRASEÑA.value="";
+        habilitacionBoton();
     }
 
-    CONTRASEÑA.value="";
-
-
+    if(validarMail(EMAIL_INPUT.value) && validarPassword(CONTRASEÑA.value)){
+        EMAIL_INPUT.value="";
+        CONTRASEÑA.value="";
+        habilitacionBoton();
+    }
 })

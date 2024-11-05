@@ -5,7 +5,7 @@ function validarMail(email){
      
     return regex.test(email);
     
-    }
+}
     
 function validarPassword(password){
     
@@ -14,50 +14,82 @@ function validarPassword(password){
     
 }
 
+const correo = document.getElementById("correo");
+const contrasenia = document.getElementById("contraseña");
+
+function habilitacionBoton() {
+
+    // Verifica si ambos campos tienen algún valor
+    const emailCompletado = correo.value.trim() !== "";
+    const contraseniaCompletada = contrasenia.value.trim() !== "";
+
+    // Habilita el botón solo si ambos campos están llenos
+    document.getElementById("boton-enviar").disabled = !(emailCompletado && contraseniaCompletada);
+}
+
+// Agrega el evento 'input' a ambos campos para monitorear los cambios
+correo.addEventListener("input", habilitacionBoton);
+contrasenia.addEventListener("input", habilitacionBoton);
+
 document.getElementById("formulario").addEventListener("submit", function (event){
 
     event.preventDefault(); //evita que se envie el formulario
 
     const EMAIL_INPUT=document.getElementById("correo");
-    const msjMail=document.querySelector(".msjMail");
-    const EMAIL=EMAIL_INPUT.value;
+    let msjMail=document.querySelector(".msjMail");
+    let email=EMAIL_INPUT.value;
 
-    if(validarMail(EMAIL)){
+    // if(EMAIL == ""){
+    //     msjMail.style.display="flex";
+    //     msjMail.textContent="Debe completar el campo EMAIL";
+    //     msjMail.style.color="red";
+    //     EMAIL_INPUT.style.borderColor="red";
+    //     EMAIL_INPUT.value="";
+    // }
+    if (validarMail(email)){
 
         msjMail.style.display="flex"
-        msjMail.textContent="Correo valido";
+        msjMail.textContent="Correo válido";
         msjMail.style.color="green"
         EMAIL_INPUT.style.borderColor="green"
 
     }else{
 
         msjMail.style.display="flex"
-        msjMail.textContent="Correo invalido"
+        msjMail.textContent="Correo inválido"
         msjMail.style.color="red"
         EMAIL_INPUT.style.borderColor="red"
+        EMAIL_INPUT.value="";
+        habilitacionBoton();
     }
 
-    EMAIL_INPUT.value="";
+    
 
     const PASSWORD_INPUT=document.getElementById("contraseña")
     const msjContraseña=document.querySelector(".msjContraseña");
     const PASSWORD= PASSWORD_INPUT.value;
-
+    
+    
+    
     if(validarPassword(PASSWORD)){
 
         msjContraseña.style.display="flex"
         msjContraseña.textContent="Contraseña valida";
         msjContraseña.style.color="green"
         document.getElementById("contenedor-password").style.borderColor="green"
-
-        
-    }else{
+    } else{
 
         msjContraseña.style.display="flex"
         msjContraseña.textContent="Ingrese una contraseña con una longitud de 8 a 12 caracteres y que contenga al menos una mayuscula, una minuscula, un numero y un caracter especial";
         msjContraseña.style.color="red"
         document.getElementById("contenedor-password").style.borderColor="red"
+        PASSWORD_INPUT.value="";
+        habilitacionBoton();
     }
 
-    PASSWORD_INPUT.value=""
+    if(validarMail(email) && validarPassword(PASSWORD)){
+        EMAIL_INPUT.value="";
+        PASSWORD_INPUT.value="";
+        habilitacionBoton();
+    }
 })

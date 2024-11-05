@@ -71,6 +71,12 @@ input::-webkit-inner-spin-button {
    background-color: var(--light-color-acento-1);
 }
 
+.guardar:disabled {
+   background-color: lightgrey;
+   color: var(--light-color-texto);
+   cursor: not-allowed;
+}
+
 #btn_cambiar {
    background-color: var(--light-color-acento-3);
    color: var(--light-color-acento-2);
@@ -114,6 +120,15 @@ section{
    display: flex;
    flex-wrap: nowrap;
    align-items: center;
+}
+
+.msjMail, .msjNombre, .msjApellido, .msjTipoDoc, .msjNroDoc, .msjFechaNac, .msjTelefono, .msjMailSecundario{
+   margin: 0;
+   align-items: center; 
+   justify-content: center;
+   display: none;
+   font-size: 90%;
+
 }
 
 

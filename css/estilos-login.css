@@ -88,6 +88,12 @@ a {
    cursor: pointer;
 }
 
+#boton-enviar:disabled {
+   background-color: lightgrey;
+   color: var(--light-color-texto);
+   cursor: not-allowed;
+}
+
 #contenedor-terminos {
    margin: -10px 5px 5px 5px;
    padding: 5px;
