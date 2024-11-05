@@ -4,21 +4,37 @@ function validarMail(email){
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net)$/;
      
     return regex.test(email);
-    
-    }
 
-  document.getElementById("formulario").addEventListener("submit", function (event){
+}
+
+const correo = document.getElementById("correo");
+
+function habilitacionBoton() {
+
+    const emailCompletado = correo.value.trim() !== "";
+
+    // Habilita el botón solo si el campo correo esta completado
+    document.getElementById("boton-enviar").disabled = !(emailCompletado);
+}
+
+// Agrega el evento 'input' al campo correo
+correo.addEventListener("input", habilitacionBoton);
+
+
+document.getElementById("formulario").addEventListener("submit", function (event){
 
     event.preventDefault();
 
     const EMAIL_INPUT=document.getElementById("correo");
-    const mensaje=document.getElementById("msj");
-    const EMAIL=EMAIL_INPUT.value;
+    let mensaje=document.getElementById("msj");
+    let EMAIL=EMAIL_INPUT.value;
 
     if(validarMail(EMAIL)){
 
         EMAIL_INPUT.style.borderColor="green"
-        mensaje.style.display="none"
+        mensaje.style.display="flex"
+        mensaje.textContent="Correo enviado";
+        mensaje.style.color="green";
         
     }else{
 
@@ -29,5 +45,5 @@ function validarMail(email){
     }
 
     EMAIL_INPUT.value="";
-
-  })  
+    habilitacionBoton();
+})  
