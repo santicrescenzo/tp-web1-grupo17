@@ -26,10 +26,30 @@ body{
 #encabezado-segunda-linea {
    border-top: 3px solid;
    border-top-color: var(--light-color-acento-1);
-   height: 100px;
-   display: flex;
+   height: 200px;
+   display: grid;
    align-items: center;
    justify-content: center;
+}
+
+#encabezado-segunda-linea{
+   width: 100%;
+   height: auto;
+}
+
+.carousel-item img {
+   width: 100%; 
+   height: auto; 
+   
+   border: 2px solid black;
+
+}
+
+.carousel-inner img{
+   width: 100%;
+   height: auto; 
+   object-fit: cover;
+   
 }
 
 #logo {
@@ -95,6 +115,7 @@ body{
    font-family: 'Nunito Sans',sans-serif;
    display: flex;
    justify-content: space-around;
+   padding-top: 20px;
 }
 
 #navegacion-categoria ul {
