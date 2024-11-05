@@ -192,6 +192,22 @@ body{
    color: gold;
 }
 
+.item-valor-rating {
+   display: inline;
+}
+
+.fa-sharp.fa-solid.fa-star {
+   color: rgb(235, 235, 44);
+   margin-left: 5px;
+   display: inline;
+}
+
+.fa-sharp.fa-solid.fa-star.gris {
+   color: rgb(147, 146, 146);
+   margin-left: 5px;
+   display: inline;
+}
+
 
 .articulo-categoria.click-effect {
    box-shadow: 0 0 15px 10px rgba(76, 138, 135, 0.5);
@@ -248,7 +264,6 @@ summary{
 
 .header-articulo {
    height: 100%;
-   display: flex;
    flex-direction: column;
 }
 
