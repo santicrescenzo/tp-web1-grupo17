@@ -53,36 +53,45 @@
       
       <div id="encabezado-segunda-linea">
 
-         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+         <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+               <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4"></button>
+               <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+
             <div class="carousel-inner">
 
               <div class="carousel-item active">
-                <img src="https://cdn0.recetasgratis.net/es/posts/7/7/9/flan_de_miel_con_nueces_65977_600.webp" class=""  alt="...">
+                <img src="" class="d-block w-100"  alt="imagen 1">
               </div>
 
               <div class="carousel-item">
-                <img src="https://cdn0.recetasgratis.net/es/posts/0/3/0/ensalada_verde_con_frutos_rojos_61030_600.webp" class=""  alt="...">
+                <img src="" class="d-block w-100"  alt="imagen 2">
               </div>
 
               <div class="carousel-item">
-                <img src="https://cdn0.recetasgratis.net/es/posts/9/6/0/cazuela_de_mariscos_y_verduras_22069_600.webp" class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="imagen 3">
               </div>
 
               <div class="carousel-item ">
-               <img src="https://cdn0.recetasgratis.net/es/posts/0/6/8/mollejas_de_cordero_al_ajillo_73860_600.webp" class="d-block w-100" alt="...">
+               <img src="" class="d-block w-100" alt="imagen 4">
              </div>
 
              <div class="carousel-item">
-               <img src="https://cdn0.recetasgratis.net/es/posts/2/2/7/noquis_de_remolacha_73722_600.webp" class="d-block w-100" alt="...">
+               <img src="" class="d-block w-100" alt="imagen 5">
              </div>
 
-               
-
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
+
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
@@ -116,6 +125,7 @@
                <!-- <p class="item-valor-portada">Imagen de Portada</p> -->
 
                <p class="item-valor-descripcion">Valor de la Descripcion</p> <!--Ponerle max height determinado. Overflow: auto para scrollear-->
+               <!-- <div class="star-rating" data-rating="1"></div>   -->
                <p class="item-valor-rating">Valor de Rating</p>
             </header>
 
@@ -419,7 +429,7 @@
    <script type="module" src="_core/js/cargar_datos.js"></script>
    <script src="js/items.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
+   <script src="js/stars.js"></script>
+   <script type="module" src="js/imagenes-carrusel.js"></script>
 </body>
 </html>
