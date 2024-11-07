@@ -39,7 +39,8 @@ body{
 }
 
 #carouselExampleAutoplaying {
-   max-width: 600px;
+   width: 600px;
+
 }
  
 .carousel-item img {
@@ -148,7 +149,7 @@ body{
 }
 
 
-#seccion-categoria{
+#seccion-categoria, #div-nuevo{
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;

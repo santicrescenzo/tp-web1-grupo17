@@ -30,18 +30,3 @@ for(let i = 0; i < 5; i++){
   
 }
 
-
-// let primerportada = itemsCarrusel[0];
-// primerportada.src = portadaAleatoria();
-
-// let segundaportada = itemsCarrusel[1];
-// segundaportada.src = portadaAleatoria();
-
-// let tercerPortada = itemsCarrusel[2];
-// tercerPortada.src = portadaAleatoria();
-
-// let cuartaPortada = itemsCarrusel[3];
-// cuartaPortada.src = portadaAleatoria();
-
-// let quintaPortada = itemsCarrusel[4];
-// quintaPortada.src = portadaAleatoria();
