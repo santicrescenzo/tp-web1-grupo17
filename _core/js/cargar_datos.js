@@ -2,7 +2,7 @@
 import configuracion from "../../config/configuracion.json" with { type: 'json' };
 
 const tabCategoria1 = document.querySelector("#tab-categoria-1");
-
+let catClickeada = ""
 var linksCategorias = document.querySelectorAll("a.tab-categoria");
 var articulos;
 
@@ -17,7 +17,9 @@ seccionCategoria.appendChild(nuevoDiv);
 linksCategorias.forEach(function(linkCategoria) {
    linkCategoria.addEventListener("click", function() {
       articulos = ""
+      catClickeada = linkCategoria.innerText;
 
+      // Si la categoria es "Todas", llamo a la funcion que carga los datos en la categoría "Todas"
        if(linkCategoria.innerText === "Todas" || linkCategoria.innerText === "restaurant"){
           cargaDatosCategoriaTodas();
        } else{
@@ -79,7 +81,7 @@ function cargaDatosCategoriaTodas(){
   nuevoDiv.style.display = "flex";
   nuevoDiv.innerHTML = "";
 
-
+   // Utilizo cloneNode() para crear 40 articulos, los cuales agrego al div nuevoDiv
          const articulos = document.querySelectorAll(".articulo-categoria");
          for(let i = 0; i < 4; i++){
             articulos.forEach(art =>{
@@ -87,12 +89,14 @@ function cargaDatosCategoriaTodas(){
                nuevoDiv.appendChild(artClonado);
             })
          }
+
          const articulos2 = document.querySelectorAll(".articulo-categoria");
-         console.log(articulos2);
+         
+         // Recorro los 50 articulos
          articulos2.forEach((art, index) =>{
 
-               
-
+            
+            // Cargo los datos del header-articulo
          art.getElementsByClassName("item-valor-nombre")[0].innerText = recetas[index].Nombre;
          art.getElementsByClassName("item-valor-autor")[0].innerText = recetas[index].Autor;
          art.getElementsByClassName("item-valor-portada")[0].src = recetas[index].Portada;
@@ -100,6 +104,7 @@ function cargaDatosCategoriaTodas(){
          art.getElementsByClassName("item-valor-rating")[0].innerText = recetas[index].Rating;
 
 
+         // Cargo los datos del detalle-articulo
           for (const property in recetas[index]) {
 
             switch(property.split(".")[0]) {
@@ -129,12 +134,28 @@ function cargaDatosCategoriaTodas(){
                 
                   break;
             }
-         };})
-
-         
-         
+         }
+         ;})
          }
 
+         // Buscador de la categoría "Todas"
+      document.getElementById("buscador").addEventListener("input", function(){
+         if(catClickeada == "Todas"){
+         let textoBuscado = document.getElementById("buscador").value;
+         const nombresDeArticulos = document.getElementsByClassName("item-valor-nombre");
+
+         // Recorro todos los nombres de los articulos
+         Array.from(nombresDeArticulos).forEach(nombre => {
+
+            // Si el nombre contiene el texto buscado, muestra el articulo. Caso contrario, no lo muestra
+            if (nombre.innerText.toLowerCase().includes(textoBuscado.toLowerCase())) {
+               nombre.parentNode.parentNode.style.display = "flex";
+            } else {
+               nombre.parentNode.parentNode.style.display = "none";
+            }
+         })
+      }
+      })
 
 
 

@@ -1,4 +1,5 @@
 
+// Validaciones
 function validarMail(email){
 
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net)$/;
@@ -40,6 +41,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
     const EMAIL_INPUT=document.getElementById("correo");
     let msjMail=document.getElementById("msjMail");
 
+    // Mensajes segun si los campos son validos o no
     if(validarMail(EMAIL_INPUT.value)){
 
         msjMail.style.display="flex";
@@ -60,6 +62,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
     const CONTRASEÑA=document.getElementById("contraseña")
     const msjContraseña=document.getElementById("msjContraseña");
 
+    // Mensajes segun si los campos son validos o no
     if(validarPassword(CONTRASEÑA.value)){
 
         msjContraseña.style.display="flex"

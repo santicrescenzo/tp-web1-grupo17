@@ -5,14 +5,15 @@ function habilitacionBoton() {
 
     const emailCompletado = correo.value.trim() !== "";
 
-    // Habilita el botón solo si el campo correo está lleno
+    // Habilito el botón solo si el campo correo está lleno
     document.getElementById("guardar-usuario").disabled = !(emailCompletado);
 }
 
-// Agrega el evento 'input' a ambos campos para monitorear los cambios
+// Agrego el evento 'input' a ambos campos para monitorear los cambios
 correo.addEventListener("input", habilitacionBoton);
 
 
+// Validaciones
 function validarMail(email){
 
   const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net)$/;
@@ -49,6 +50,7 @@ function validarNroDocumento(nroDocumento){
 
 }
 
+// Valido que el usuario tenga mas de 16 años
 function validarFechaNac(fechaNac){
 
   const regexFechaNac = /^\d{4}-\d{2}-\d{2}$/;
@@ -87,6 +89,7 @@ document.getElementById("formulario-usuario").addEventListener("submit", functio
   let msjMail=document.querySelector(".msjMail");
   let email=EMAIL_INPUT.value;
 
+  // Mensajes segun si el mail es valido o no
   if (validarMail(email)){
     document.getElementById("usuario").style.height = "338px";
     msjMail.style.display="flex";
@@ -114,6 +117,7 @@ document.getElementById("formulario-datos-personales").addEventListener("submit"
   let msjNombre=document.querySelector(".msjNombre");
   let nombre=NOMBRE_INPUT.value;
 
+  // Mensajes segun si los campos son validos o no
   if (validarNombre(nombre)){
     document.getElementById("datos-personales").style.height = "790px";
     msjNombre.style.display="flex";

@@ -1,4 +1,5 @@
 
+// Validacion
 function validarMail(email){
 
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net)$/;
@@ -29,6 +30,7 @@ document.getElementById("formulario").addEventListener("submit", function (event
     let mensaje=document.getElementById("msj");
     let EMAIL=EMAIL_INPUT.value;
 
+    // Mensajes segun si el campo es valido o no
     if(validarMail(EMAIL)){
 
         EMAIL_INPUT.style.borderColor="green"
